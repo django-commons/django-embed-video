@@ -8,6 +8,8 @@ Unreleased
 
 - Switched to trusted publisher release process with Django Commons.
 - Switch from Jazzband org to Django Commons.
+- Require Python 3.11 or newer and Django 5.2 or newer.
+- Add Django 6.1 support.
 
 
 Release 1.4.10 (May 7, 2024)
