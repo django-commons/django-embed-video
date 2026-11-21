@@ -10,6 +10,13 @@ Unreleased
 - Switch from Jazzband org to Django Commons.
 - Require Python 3.11 or newer and Django 5.2 or newer.
 - Add Django 6.1 support.
+- Add Python 3.15 and PyPy 3.11 support.
+- Fix YouTube error 153 by adding ``referrerpolicy`` to the embed code
+  (#217).
+- Fix a syntax warning on Python 3.12.
+- Stop installing the abandoned ``readme`` package when building.
+- Include the Polish translation in the wheel.
+- Repair the documentation build on Read the Docs.
 
 
 Release 1.4.10 (May 7, 2024)
