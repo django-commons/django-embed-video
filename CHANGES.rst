@@ -3,8 +3,8 @@ Changes
 =======
 
 
-Unreleased
-----------
+Release 1.5.0 (November 21, 2026)
+---------------------------------
 
 - Switched to trusted publisher release process with Django Commons.
 - Switch from Jazzband org to Django Commons.
