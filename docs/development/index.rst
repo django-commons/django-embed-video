@@ -8,4 +8,3 @@ Development
   contributing
   testing
   changelog
-  todos

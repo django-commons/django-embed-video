@@ -1,33 +1,26 @@
 Testing
 =======
 
-Requirements
-------------
+The tests run with `tox <https://tox.wiki/>`_, which installs the
+requirements into its own environments.
 
-The library needs ``Django`` and ``requests`` and ``nose``, ``mock``,
-``south`` and ``testfixtures`` libraries to run tests.  They will be installed
-automatically when running tests via setup.py
+Run all environments with:
 
 ::
 
+  python -m pip install tox
+  tox
 
-Running tests
--------------
-
-Run tests with this command:
-
-::
-
-  python setup.py nosetests
-
-
-Be sure to run it before each commit and fix broken tests.
-
-
-Run tests with coverage:
+Run the tests for one Python and Django version with:
 
 ::
 
-  python setup.py nosetests --with-coverage --cover-package=embed_video
+  tox -e py312-dj52
 
+Check the code style with:
 
+::
+
+  tox -e py311-djqa
+
+Be sure to run the tests before each commit and fix broken tests.
