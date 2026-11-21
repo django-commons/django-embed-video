@@ -3,13 +3,13 @@ django-embed-video
 
 Django app for easy embedding YouTube and Vimeo videos and music from SoundCloud.
 
-.. image:: https://github.com/django-commons/django-embed-video/workflows/Test/badge.svg
-   :target: https://github.com/django-commons/django-embed-video/actions
+.. image:: https://github.com/django-commons/django-embed-video/actions/workflows/test.yml/badge.svg
+   :target: https://github.com/django-commons/django-embed-video/actions/workflows/test.yml
    :alt: GitHub Actions
 .. image:: https://img.shields.io/pypi/pyversions/django-embed-video.svg
    :target: https://pypi.org/project/django-embed-video/
    :alt: Supported Python versions
-.. image:: https://img.shields.io/pypi/djversions/django-embed-video.svg
+.. image:: https://img.shields.io/pypi/frameworkversions/django/django-embed-video.svg
    :target: https://pypi.org/project/django-embed-video/
    :alt: Supported Django versions
 
@@ -17,7 +17,7 @@ Django app for easy embedding YouTube and Vimeo videos and music from SoundCloud
 Documentation
 -------------
 
-Documentation is at: http://django-embed-video.rtfd.org/
+Documentation is at: https://django-embed-video.readthedocs.io/
 
 
 Quick start

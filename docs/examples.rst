@@ -62,14 +62,14 @@ to url.
 .. tip::
 
   We recommend to use `sorl-thumbnail
-  <http://sorl-thumbnail.readthedocs.org/en/latest/>`_ to `change
-  <http://sorl-thumbnail.readthedocs.org/en/latest/examples.html#template-examples>`_
+  <https://sorl-thumbnail.readthedocs.io/en/latest/>`_ to `change
+  <https://sorl-thumbnail.readthedocs.io/en/latest/examples.html#template-examples>`_
   thumbnail size.
 
 .. tip::
 
   To speed up your pages, consider `template fragment caching
-  <https://docs.djangoproject.com/en/dev/topics/cache/#template-fragment-caching>`_.
+  <https://docs.djangoproject.com/en/stable/topics/cache/#template-fragment-caching>`_.
 
 .. tip::
 
