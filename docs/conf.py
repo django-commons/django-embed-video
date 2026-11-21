@@ -11,7 +11,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-from pkg_resources import get_distribution
+from importlib.metadata import version as distribution_version
 import os
 import sys
 
@@ -23,8 +23,6 @@ sys.path.insert(0, os.path.abspath("."))
 sys.path.insert(0, os.path.abspath(".."))
 
 os.environ["DJANGO_SETTINGS_MODULE"] = "embed_video.tests.django_settings"
-
-on_rtd = os.environ.get("READTHEDOCS", None) == "True"
 
 # -- General configuration -----------------------------------------------------
 
@@ -39,7 +37,6 @@ extensions = [
     "sphinx.ext.autosummary",
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
-    "ext.djangodocs",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -63,7 +60,7 @@ copyright = "2018, Django Commons"
 # built documents.
 
 # The full version, including alpha/beta/rc tags.
-release = get_distribution("django-embed-video").version
+release = distribution_version("django-embed-video")
 
 # The short X.Y version.
 version = ".".join(release.split(".")[:2])
@@ -112,14 +109,7 @@ pygments_style = "sphinx"
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-if not on_rtd:  # only import and set the theme if we're building docs locally
-    try:
-        import sphinx_rtd_theme
-
-        html_theme = "sphinx_rtd_theme"
-        html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-    except ImportError:
-        html_theme = "default"
+html_theme = "sphinx_rtd_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -148,7 +138,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ["_static"]
+html_static_path = []
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -289,9 +279,16 @@ texinfo_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
-    "python": ("http://docs.python.org/2.7", None),
+    "python": ("https://docs.python.org/3", None),
     "django": (
-        "https://docs.djangoproject.com/en/1.6/",
-        "http://docs.djangoproject.com/en/1.6/_objects/",
+        "https://docs.djangoproject.com/en/stable/",
+        "https://docs.djangoproject.com/en/stable/_objects/",
     ),
 }
+
+
+def setup(app):
+    # The ``setting`` directive and role, as in the Django documentation
+    app.add_crossref_type(
+        directivename="setting", rolename="setting", indextemplate="pair: %s; setting"
+    )
