@@ -3,6 +3,9 @@ django-embed-video
 
 Django app for easy embedding YouTube and Vimeo videos and music from SoundCloud.
 
+.. image:: https://img.shields.io/badge/Django%20Commons-Project-blue.svg
+   :target: https://github.com/django-commons/
+   :alt: Django Commons
 .. image:: https://github.com/django-commons/django-embed-video/actions/workflows/test.yml/badge.svg
    :target: https://github.com/django-commons/django-embed-video/actions/workflows/test.yml
    :alt: GitHub Actions
