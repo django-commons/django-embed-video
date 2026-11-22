@@ -40,6 +40,9 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/django-commons/django-embed-video"
+Documentation = "https://django-embed-video.readthedocs.io/"
+Changelog = "https://github.com/django-commons/django-embed-video/blob/master/CHANGES.rst"
+Issues = "https://github.com/django-commons/django-embed-video/issues"
 
 [tool.setuptools.packages.find]
 include = ["embed_video*"]
